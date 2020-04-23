@@ -70,3 +70,35 @@ body, html, * {
   display: flex;
   flex-direction: row-reverse;
 }
+
+@media screen and (min-width: 768px) {
+  .heading {
+    padding: 0 30%;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+
+    grid-template-areas:
+      ". card-red  ."
+      "card-aqua card-red  card-blue"
+      "card-aqua card-orange  card-blue"
+      ". card-orange  .";
+  }
+
+  .card-aqua {
+    grid-area: card-aqua;
+  }
+  .card-red {
+    grid-area: card-red;
+  }
+  .card-orange {
+    grid-area: card-orange;
+  }
+  .card-blue {
+    grid-area: card-blue;
+  }
+}
