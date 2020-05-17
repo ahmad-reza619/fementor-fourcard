@@ -74,12 +74,13 @@ body, html, * {
 @media screen and (min-width: 768px) {
   .heading {
     padding: 0 30%;
+    height: 30vh;
   }
 
   .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(150px, 1fr));
     gap: 1rem;
 
     grid-template-areas:
@@ -87,6 +88,12 @@ body, html, * {
       "card-aqua card-red  card-blue"
       "card-aqua card-orange  card-blue"
       ". card-orange  .";
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .card-aqua {
